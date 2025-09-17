@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}L'accueil{% endblock %}
+
+{% block body %}
+
+    <style>
+    .page-accueil {
+        color: #660099;       /* Couleur du texte */
+        font-size: 2rem;       /* Taille du texte */
+        line-height: 1.6;      /* Interligne */
+        font-weight: 600;      /* Épaisseur du texte */
+    }
+
+    .description{
+        color: #660099;       /* Couleur du texte */
+        font-size: 2rem;       /* Taille du texte */
+        line-height: 1.6;      /* Interligne */
+        font-weight: 400;      /* Épaisseur du texte */
+
+    }
+    .description1{
+        color: #660099;       /* Couleur du texte */
+        font-size: 2rem;       /* Taille du texte */
+        line-height: 1.6;      /* Interligne */
+        font-weight: 400;      /* Épaisseur du texte */
+
+    }
+    .description h3 {
+        color: #660099;       /* Couleur du texte */
+        font-size: 3rem;       /* Taille du texte */
+        line-height: 1.6;      /* Interligne */
+        font-weight: 400;      /* Épaisseur du texte */
+    }
+    .example-wrapper h1{
+        color: #660099;       /* Couleur du texte */
+        font-size: 4.5rem;       /* Taille du texte */
+        line-height: 1.6;      /* Interligne */
+        font-weight: 900;      /* Épaisseur du texte */
+        text-align: center;   /* Centrer le texte */
+    }
+    </style>
+        <div class="example-wrapper">
+            <h1>Bienvenue sur Le site de <strong>Lionel</strong> votre pâtissier passionné !</h1>
+        </div><br>
+
+        <div class="description">
+        <h3 style="text-align: center;">Chez Lionel, chaque création sucrée </h3>
+        <h3 style="text-align: center;">est préparée avec amour. </h3>
+        <h3 style="text-align: center;">❣️❣️❣️</h3> 
+
+        <p class="page-accueil"><stong>Son savoir-faire et ainsi  des ingrédients de qualité en font quelque chose d'exeptionnel.</strong></P>
+        <p style="text-align: center;"> Que vous cherchiez : 🔍 </p>
+        <ul class="description1" >
+        <li>
+            Des gâteaux pour vos anniversaires. 🎂🎂
+        </li><br>
+        <li>
+            Des desserts raffinés pour vos événements. 🍨🍨
+        </li><br>
+        <li>
+            simplement une gourmandise pour égayer votre journée,🥯🥯🍰🍰
+        </li><br>
+        </ul>
+        </div>
+            <h2 class="description"><strong>Vous trouverez ici des saveurs qui émerveilleront vos papilles. 🤩🤩</stong></h2>
+        <ul class="description1" >
+            <li>Explorez nos recettes, découvrez nos créations et laissez-vous tenter par des douceurs artisanales qui allient tradition et originalité.</li>
+            <li>Lionel met tout son cœur à transformer chaque dessert en un moment unique et inoubliable.</li>
+            <li>Savourez la passion, goûtez l’excellence !</li>
+        </ul>
+        </div>
+{% endblock %}

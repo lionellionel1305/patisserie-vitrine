@@ -1,0 +1,203 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les types de pâtes{% endblock %}
+
+{% block body %}
+<style>
+   .example-wrapper h1{
+        color: #660099;
+        font-size: 4.5rem;
+        line-height: 1.6;
+        font-weight: 900;
+        text-align: center;
+    }
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .card {
+        background-color: #FEFEE0;
+        border: 1px solid #660099;
+        border-radius: 20px;
+        padding: 20px;
+        width: 400px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+</style>
+
+<div class="example-wrapper">
+    <h1>Les différentes types de pâtes</h1>
+</div>
+
+<div class="cards-container">
+
+  <!-- Pâte brisée -->
+  <div class="card">
+    <h4>1️⃣ Pâte brisée</h4>
+    <img src="{{ asset('images/pateBriser.png') }}" alt="Pâte brisée" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>300 g de farine</li>
+      <li>150 g de beurre en pommade</li>
+      <li>1/2 cuillère à café de sel</li>
+      <li>3 cuillères à soupe de sucre (si pâte sucrée)</li>
+      <li>8 cl d'eau ou de lait tiède</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Mélanger la farine et le sel dans un grand bol.</li>
+        <li>Ajouter le beurre en pommade et sabler du bout des doigts.</li>
+        <li>Incorporer le sucre si la pâte est sucrée.</li>
+        <li>Ajouter l'eau ou le lait petit à petit jusqu'à obtenir une pâte homogène.</li>
+        <li>Former une boule, envelopper dans du film plastique et réfrigérer 30 minutes avant utilisation.</li>
+      </ol>
+    </div>
+  </div>
+  
+  <!-- Pâte sablée -->
+  <div class="card">
+    <h4>2️⃣ Pâte sablée</h4>
+    <img src="{{ asset('images/pateSablee.png') }}" alt="Pâte sablée" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>250 g de farine</li>
+      <li>100 g de beurre en pommade</li>
+      <li>125 g de sucre</li>
+      <li>1 pincée de sel</li>
+      <li>1 œuf entier</li>
+      <li>1 zeste de citron</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Dans un bol, délayer l'œuf avec le sucre en poudre et une pincée de sel.</li>
+        <li>Mettre la farine sur le plan de travail, faire un puits au centre, verser-y le contenu du bol et le zeste de citron, puis le beurre fondu (surtout pas liquide !).</li>
+        <li>Malaxer le tout jusqu'à obtenir une pâte homogène. Étalez-la au rouleau.</li>
+        <li>Faire cuire à four chaud 12 à 15 minutes. Possibilité de mettre du papier sulfurisé dessus pour éviter que ça ne brûle.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Pâte sucrée -->
+  <div class="card">
+    <h4>3️⃣ Pâte sucrée</h4>
+    <img src="{{ asset('images/pateSucree.png') }}" alt="Pâte sucrée" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>250 g de farine</li>
+      <li>120 g de beurre en pommade</li>
+      <li>70 g de sucre</li>
+      <li>1 pincée de sel</li>
+      <li>1 œuf entier</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Dans un saladier, mélanger le beurre, le sucre et le sel.</li>
+        <li>Ajouter l'œuf entier et mélanger la préparation de façon homogène.</li>
+        <li>Ajouter la farine et tasser la pâte à l'aide des mains.</li>
+        <li>Quand la pâte commence à se former, la sortir du saladier.</li>
+        <li>La travailler sur le plan de travail jusqu'à ce qu'elle devienne brillante.</li>
+        <li>Former une boule.</li>
+        <li>La fariner légèrement.</li>
+        <li>À mettre à température ambiante, dans du papier aluminium.</li>
+        <li>Laisser reposer pendant au moins 1 heure.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Pâte feuilletée -->
+  <div class="card">
+    <h4>4️⃣ Pâte feuilletée</h4>
+    <img src="{{ asset('images/patefeuillete.png') }}" alt="Pâte feuilletée" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>200 g de farine + 50 g pour le travail</li>
+      <li>200 g de beurre en pommade</li>
+      <li>1 cuillère à café de sel</li>
+      <li>100 g d'eau</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Mettre la farine tamisée et le sel dans une terrine, creuser une fontaine et verser les 3/4 de l'eau.</li>
+        <li>Pétrir vivement du bout des doigts, sans trop travailler la pâte pour éviter l'élasticité.</li>
+        <li>La détrempe doit avoir la même consistance que le beurre, plutôt ferme que molle. Laisser reposer 20 minutes.</li>
+        <li>Fariner légèrement la planche, étendre la détrempe sur 1 cm d'épaisseur et mettre le beurre au milieu. Rabattre les quatre pans de la pâte pour l'enfermer.</li>
+        <li>Étendre la pâte au rouleau en une bande longue et régulière, jusqu'à apercevoir le beurre.</li>
+        <li>Plier la pâte en 3 (rabattre un des bouts sur le milieu, puis l'autre par-dessus). C'est ce qu'on appelle donner un tour.</li>
+        <li>Recommencer à l'allonger au rouleau, puis plier en 3 pour le 2ᵉ tour. Laisser reposer au frais environ 20 minutes.</li>
+        <li>Répéter l'opération en laissant reposer au frais 20 minutes entre chaque tour, pour un total de 6 tours.</li>
+        <li>On peut donner plus de tours : la pâte gagne alors en légèreté.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Pâte à choux -->
+  <div class="card">
+    <h4>5️⃣ Pâte à choux</h4>
+    <img src="{{ asset('images/pateAChoux.png') }}" alt="Pâte à choux" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>125 g de farine</li>
+      <li>100 g de beurre</li>
+      <li>1 pincée de sel</li>
+      <li>1/4 l d'eau</li>
+      <li>4 œufs</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Préchauffer le four thermostat 7.</li>
+        <li>Dans une casserole, faire bouillir l'eau avec le beurre et le sel. À la première ébullition, retirer du feu et verser la farine d'un seul coup. Tourner rapidement, puis dessécher la pâte en la travaillant sur le feu avec une cuillère en bois jusqu'à ce qu'elle se détache des parois.</li>
+        <li>Hors du feu, ajouter les œufs un par un en travaillant bien la pâte à chaque fois. Elle doit rester molle mais former un seul bloc.</li>
+        <li>Former de petits tas et les disposer sur une plaque recouverte de papier sulfurisé.</li>
+        <li>Faire cuire environ 25 minutes.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Pâte à génoise -->
+  <div class="card">
+    <h4>6️⃣ Pâte à biscuit ou génoise</h4>
+    <img src="{{ asset('images/pateGenoise.png') }}" alt="Pâte à génoise" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>125 g de farine</li>
+      <li>125 g de sucre</li>
+      <li>4 œufs</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Mélanger le sucre et les œufs. Monter un sabayon au bain-marie avec un fouet.</li>
+        <li>Retirer la préparation du bain-marie et fouetter jusqu'à complet refroidissement.</li>
+        <li>Incorporer délicatement la farine tamisée à l'aide d'une spatule.</li>
+        <li>Mettre la génoise à cuire et démouler aussitôt la sortie du four.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<script>
+  const showRecipe = document.getElementById('showRecipe');
+  const recipeDetails = document.getElementById('recipeDetails');
+
+  showRecipe?.addEventListener('click', () => {
+      recipeDetails.classList.toggle('hidden');
+  });
+</script>
+
+{% endblock %}

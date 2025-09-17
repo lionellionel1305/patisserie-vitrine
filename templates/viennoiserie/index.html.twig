@@ -1,0 +1,162 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les viennoiseries{% endblock %}
+
+{% block body %}
+<style>
+   .example-wrapper h1{
+        color: #660099;
+        font-size: 4.5rem;
+        line-height: 1.6;
+        font-weight: 900;
+        text-align: center;
+    }
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .card {
+        background-color: #FEFEE0;
+        border: 1px solid #660099;
+        border-radius: 20px;
+        padding: 20px;
+        width: 400px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+</style>
+
+<div class="example-wrapper">
+    <h1>Les viennoiseries</h1>
+</div>
+
+<div class="cards-container">
+
+  <!-- Croissant -->
+  <div class="card">
+    <h4>1️⃣ Croissant au beurre</h4>
+    <img src="{{ asset('images/Croissant.png') }}" alt="Croissant au beurre" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>500 g de farine</li>
+      <li>25 g de levure de boulanger</li>
+      <li>200 g de beurre en pommade</li>
+      <li>15 g de sel</li>
+      <li>50 g de sucre</li>
+      <li>25 cl de lait</li>
+      <li>1 verre d'eau chaude</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Ajouter le reste de la farine, le sucre, le sel et le lait chaud. Bien mélanger. La pâte doit être élastique et ne plus coller. Finir le pétrissage sur la table.</li>
+        <li>Étaler en carré. Ajouter le beurre au centre et refermer les 4 pans de la pâte (comme une enveloppe). Étaler en longueur (donner un tour).</li>
+        <li>Plier en trois. Laisser reposer 15 minutes.</li>
+        <li>Confectionner les croissants : couper la pâte en triangles de 10 × 15 × 15 cm. Humecter légèrement avec de l'eau froide et rouler en commençant par la base.</li>
+        <li>Pour suivre les tours, marquer la pâte avec les doigts (1 doigt = 1 tour, etc.). Donner 4 à 5 tours.</li>
+        <li>Dorer à l'œuf et laisser lever 1 heure. Cuire à 200–210°C pendant 10 à 15 minutes jusqu'à ce qu'ils soient bien dorés.</li>
+      </ol>
+    </div>
+  </div>
+  
+  <!-- Pain au chocolat -->
+  <div class="card">
+    <h4>2️⃣ Pain au chocolat</h4>
+    <img src="{{ asset('images/painChocolat.png') }}" alt="Pain au chocolat" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>500 g de farine</li>
+      <li>500 g de farine de gruau</li>
+      <li>500 g de beurre en pommade</li>
+      <li>100 g de sucre</li>
+      <li>20 g de sel</li>
+      <li>30 g de levure</li>
+      <li>1 œuf entier</li>
+      <li>600 ml d'eau</li>
+      <li>100 g de chocolat</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Suivre la recette des croissants.</li>
+        <li>Une fois le feuilletage fait et la pâte étalée, découper des rectangles de la largeur d'une barrette de chocolat. Déposer la barrette et enrouler la pâte.</li>
+        <li>Comme pour les croissants, on peut congeler les pains au chocolat à ce stade. Sur la plaque, appuyer légèrement avec la main pour éviter qu'ils ne se déroulent. Laisser gonfler 1h30 à 2h30 à température ambiante jusqu'à ce qu'ils doublent de volume.</li>
+        <li>Dorer et cuire au four chaud à 230°C pendant 15 à 20 minutes.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Chausson aux pommes -->
+  <div class="card">
+    <h4>3️⃣ Chausson aux pommes</h4>
+    <img src="{{ asset('images/chaussonPomme.png') }}" alt="Chausson aux pommes" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>2 pâtes feuilletées</li>
+      <li>1 noisette de beurre en pommade</li>
+      <li>70 g de sucre</li>
+      <li>1 cuillère à soupe de sucre en poudre</li>
+      <li>2 pommes</li>
+      <li>250 g de compote de pommes</li>
+      <li>1 jaune d'œuf</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Abaisser une pâte feuilletée, la piquer puis étaler la compote dessus.</li>
+        <li>Peler et couper les pommes en tranches, puis les disposer sur la pâte.</li>
+        <li>Saupoudrer de sucre et ajouter quelques noisettes de beurre.</li>
+        <li>Recouvrir avec l'autre pâte feuilletée, souder les bords, puis piquer la pâte. Badigeonner avec le jaune d'œuf.</li>
+        <li>Cuire au four 40 minutes, thermostat 7 (210°C).</li>
+      </ol>
+    </div>
+  </div>
+  
+  <!-- Oranais -->
+  <div class="card">
+    <h4>4️⃣ Oranais</h4>
+    <img src="{{ asset('images/Oranais.png') }}" alt="Oranais" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>1 boîte d'abricots</li>
+      <li>1 pâte feuilletée</li>
+      <li>Crème pâtissière</li>
+      <li>1 jaune d'œuf</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Préparer la crème pâtissière à l'avance et la laisser refroidir.</li>
+        <li>Égoutter bien les abricots.</li>
+        <li>Découper 4 grands carrés de pâte feuilletée. Déposer un rectangle de crème pâtissière en laissant 2 coins libres, puis ajouter 3 ou 4 oreillons d'abricots.</li>
+        <li>Replier les 2 coins sans crème sur les abricots pour former un losange.</li>
+        <li>Faire de même avec les 3 autres carrés.</li>
+        <li>Badigeonner de jaune d'œuf.</li>
+        <li>Enfourner 20 minutes à 180°C (thermostat 6).</li>
+        <li>Déguster froid.</li>
+      </ol>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const showRecipe = document.getElementById('showRecipe');
+  const recipeDetails = document.getElementById('recipeDetails');
+
+  showRecipe?.addEventListener('click', () => {
+      recipeDetails.classList.toggle('hidden');
+  });
+</script>
+
+{% endblock %}

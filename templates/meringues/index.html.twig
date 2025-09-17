@@ -1,0 +1,155 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les meringues{% endblock %}
+
+{% block body %}
+<style>
+   .example-wrapper h1{
+        color: #660099;
+        font-size: 4.5rem;
+        line-height: 1.6;
+        font-weight: 900;
+        text-align: center;
+    }
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .card {
+        background-color: #FEFEE0;
+        border: 1px solid #660099;
+        border-radius: 20px;
+        padding: 20px;
+        width: 400px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+</style>
+
+<div class="example-wrapper">
+    <h1>Les meringues</h1>
+</div>
+
+<div class="cards-container">
+
+  <!-- Meringue française -->
+  <div class="card">
+    <h4>1️⃣ Meringue française</h4>
+    <img src="{{ asset('images/meringueFrancaise.png') }}" alt="Meringue française" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>250 g de sucre semoule</li>
+      <li>4 blancs d'œuf</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Sortir les œufs du réfrigérateur 15 minutes avant de les utiliser.</li>
+        <li>Ne surtout pas mélanger de jaunes aux blancs d'œuf.</li>
+        <li>Ajouter une pincée de sel avant de battre les blancs en neige.</li>
+        <li>Utiliser un récipient plus haut que large et un batteur électrique (plus rapide et moins fatigant).</li>
+        <li>Battre les blancs en neige ferme. Ajouter le sucre petit à petit tout en continuant de battre.</li>
+        <li>Préchauffer le four à 120°C (thermostat 4).</li>
+        <li>Déposer immédiatement de petits tas de meringue sur une plaque recouverte de papier sulfurisé.</li>
+        <li>Cuire entre 30 minutes et 1 heure à 120°C.</li>
+        <li>Au bout de 30 minutes, les meringues sont blanches et moelleuses.</li>
+        <li>Au bout d'1 heure, elles sont rosées, craquantes et fondantes avec un cœur moelleux.</li>
+        <li>Une fois cuites, décoller les meringues délicatement dès la sortie du four et laisser refroidir sur une grille.</li>
+      </ol>
+    </div>
+  </div>
+  
+  <!-- Meringue italienne -->
+  <div class="card">
+    <h4>2️⃣ Meringue italienne</h4>
+    <img src="{{ asset('images/meringueItalienne.png') }}" alt="Meringue italienne" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>120 g de sucre semoule</li>
+      <li>50 g d’eau</li>
+      <li>2 blancs d'œuf</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Préparer les blancs d'œuf dans la cuve du batteur ou un saladier (si batteur électrique à main).</li>
+        <li>Dans une casserole, mettre le sucre avec l’eau. Faire cuire jusqu’à 116–118°C (sans remuer). Le sucre va fondre puis bouillir sans se colorer. Utiliser un thermomètre.</li>
+        <li>Quand le sirop atteint environ 110°C, commencer à monter les blancs à vitesse moyenne jusqu’à ce qu’ils soient mousseux.</li>
+        <li>À 118°C, verser le sirop en filet sur les blancs mousseux sans éclabousser. Fouetter à vitesse maximale jusqu’à obtenir le fameux « bec d’oiseau ».</li>
+        <li>La meringue italienne est prête. L’utiliser immédiatement (à la poche ou à la cuillère) sur une tarte ou autre dessert.</li>
+        <li>Colorer la meringue au chalumeau pour plus de précision ou au four en mode grill (attention à ne pas brûler).</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Meringue suisse -->
+  <div class="card">
+    <h4>3️⃣ Meringue suisse</h4>
+    <img src="{{ asset('images/meringueSuisse.png') }}" alt="Meringue suisse" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>400 g de sucre semoule</li>
+      <li>200 g de blancs d'œuf</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Porter une casserole d'eau à ébullition.</li>
+        <li>Dans un bol en inox, fouetter les blancs. Quand ils deviennent mousseux, ajouter le sucre.</li>
+        <li>Poser le bol sur l’eau pour réaliser un bain-marie.</li>
+        <li>Baisser la température, un léger frémissement suffit.</li>
+        <li>Fouetter la meringue jusqu’à atteindre 50–60°C (pas plus de 62°C).</li>
+        <li>Fouetter au moins 8 à 10 minutes : la meringue devient très blanche, nacrée, dense et ferme.</li>
+      </ol>
+      <h4>La meringue suisse peut ensuite être incorporée dans des mousses ou crèmes, ou cuite au four pour obtenir des meringues sèches.</h4>
+    </div>
+  </div>
+  
+  <!-- Oranais -->
+  <div class="card">
+    <h4>4️⃣ Oranais</h4>
+    <img src="{{ asset('images/Oranais.png') }}" alt="Oranais" class="card-img">
+    <p>Recette :</p>
+    <ul>
+      <li>1 boîte d'abricots</li>
+      <li>1 pâte feuilletée</li>
+      <li>Crème pâtissière</li>
+      <li>1 jaune d'œuf</li>
+    </ul>  
+    <div id="recipeDetails" class="hidden mt-4 p-4 border rounded shadow bg-white">
+      <h5 class="text-lg font-bold">Instructions détaillées :</h5>
+      <ol class="list-decimal ml-5 mt-2">
+        <li>Préparer la crème pâtissière à l'avance et la laisser refroidir.</li>
+        <li>Égoutter soigneusement les abricots.</li>
+        <li>Découper 4 grands carrés de pâte feuilletée. Déposer un rectangle de crème pâtissière en laissant 2 coins libres. Ajouter 3 ou 4 oreillons d'abricots.</li>
+        <li>Replier les 2 coins sans crème sur les abricots pour former un losange.</li>
+        <li>Faire de même avec les autres carrés de pâte.</li>
+        <li>Badigeonner les oranais de jaune d'œuf.</li>
+        <li>Enfourner 20 minutes à 180°C (thermostat 6).</li>
+        <li>Déguster froid.</li>
+      </ol>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const showRecipe = document.getElementById('showRecipe');
+  const recipeDetails = document.getElementById('recipeDetails');
+
+  showRecipe?.addEventListener('click', () => {
+      recipeDetails.classList.toggle('hidden');
+  });
+</script>
+
+{% endblock %}
